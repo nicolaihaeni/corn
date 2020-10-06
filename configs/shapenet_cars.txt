@@ -1,0 +1,11 @@
+Train
+
+python train.py --name shapenet_cars --data_dir /path/to/data/dir/ --checkpoints_dir /path/to/log/dir/ --train_data_filename car_train_128.h5 --val_data_filename car_val_128.h5 --device cuda --gpu_ids 0 --num_workers 4 --num_epochs 5 --niter 3 --n_filters 64 --batch_size 20 --display_freq 320 --print_freq 160 --update_html_freq 1600 --save_latest_freq 6400 --lambda_L1 10.0 --lambda_VGG 0.1 --lambda_3D 1.0 --lambda_SSIM 1.0 --lambda_GAN 0.1 --lambda_BCE 1.0 --num_points 10000 --final_img_size 128 --max_dataset_size 500000
+
+
+Test
+python test.py --data_dir /path/to/data/dir/ --checkpoints_dir /path/to/log/dir/ --name shapenet_cars --test_data_filename car_test_128.h5 
+
+
+Evaluation
+python evaluation.py --src_dir /path/to/result/dir
