@@ -41,13 +41,22 @@ The code is organized as follows:
 * data/ contains the data loader code
 * models/ contains the corn model
 * options/ contains the train/test options
-* utils/ contains utility functions
+* utils/ contains utility functions    
+
 
 ### Pre-Trained Models
-To be added shortly
+We make pre-trained models for the ShapeNet v2 car and chair datasets available. Please download them [here](https://drive.google.com/drive/folders/1fwNExKIXX_VWA7qHpojviJ4SGehc_5GM?usp=sharing).
+
+The checkpoint is in the "checkpoints" directory - to load weights from the checkpoint, simply pass the full path to the checkpoint to the "--checkpoints_dir" command-line argument.
 
 ### Data
-To be added shortly
+Three different datasets appear in the paper:
+
+* ShapeNet v2 cars and chairs catergories
+* Basel face dataset
+
+Due to licensing issues, we are not able to share the basel face dataset images. Please download the ShapeNet cars and chairs datasets [here](https://drive.google.com/drive/folders/1KBPN_PDTRde5nd8RQiJAfBNwezZYSuA-?usp=sharing).
+
 
 ### Training
 See `python train.py --help` for all train options. Example train call:
