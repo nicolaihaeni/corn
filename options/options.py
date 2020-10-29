@@ -19,7 +19,7 @@ class BaseOptions():
         parser.add_argument('--final_img_size', type=int, default=128, help='size of final output image height/width')
         parser.add_argument('--device', type=str, default='cpu', help='device on which to run model')
         parser.add_argument('--gpu_ids', type=str, default='-1', help='gpu ids: eg. 0   0,1,2 use -1 for CPU')
-        parser.add_argument('--norm', type=str, default='instance', help='instance normalization or batch normalization')
+        parser.add_argument('--norm', type=str, default='batch', help='instance normalization or batch normalization')
         parser.add_argument('--use_spectral', type=bool, default=True, help='use spectral normalization')
         parser.add_argument('--num_views', type=int, default=2, help='number of source views for novel view prediction')
         parser.add_argument('--load_epoch', type=str, default='latest', help='epoch to load for testing. Can either be an integer or latest')
