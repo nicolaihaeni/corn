@@ -105,7 +105,7 @@ if __name__ == '__main__':
             validation_losses = []
             model.eval()
             for ii, val_batch in enumerate(val_dataloader):
-                validation_losses.append(model.validate(batch).item())
+                validation_losses.append(model.validate(val_batch).item())
 
             model.train()
             t = (time.time() - iter_start_time) / batch_size
